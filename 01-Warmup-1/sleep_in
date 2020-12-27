@@ -1,0 +1,15 @@
+#sleep_in(False, False) → True
+#sleep_in(True, False) → False
+#sleep_in(False, True) → True
+
+
+def sleep_in(weekday, vacation):
+    if (weekday || or vacation)
+        print(True)
+    else
+        print(False)
+
+#oder
+
+def sleep_in(weekday, vacation):
+    return(not weekday or vacation)
