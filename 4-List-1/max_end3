@@ -8,13 +8,19 @@
 #max_end3([2, 11, 3]) → [3, 3, 3]
 
 def max_end3(nums):
+
     largestInt = 0
-    if nums[0] > nums[2]:
+
+    print(nums)
+    
+    if nums[0] > nums[-1:]:
         largestInt = nums[0]
     else:
-        largestInt = nums[2]
+        largestInt = nums[-1:]
 
-    for numbers in nums:
-        nums[numbers] = largestInt
-
+    for i in nums:
+        nums[i] = largestInt
+    
     return nums
+
+    
