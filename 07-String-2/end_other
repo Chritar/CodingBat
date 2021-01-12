@@ -1,0 +1,29 @@
+#Given two strings, return True if either of the strings appears at the very end 
+#of the other string, ignoring upper/lower case differences 
+#(in other words, the computation should not be "case sensitive"). 
+#Note: s.lower() returns the lowercase version of a string.
+
+
+#end_other('Hiabc', 'abc') → True
+#end_other('AbC', 'HiaBc') → True
+#end_other('abc', 'abXabc') → True
+
+def end_other(a, b):
+    
+    endA = ''
+    endB = ''
+    
+    if len(endA) < 3: endA = a.lower()
+    else: endA = a[-3:-1]
+
+    if len(endB) < 3: endB = b.lower()
+    else: endB = b[-3:-1]
+
+    return endA.lower() == b[-3:-1].lower() or endB.lower() == a[-3:-1].lower()
+
+def b_end_other(a, b):
+    
+    a = a.lower()
+    b = b.lower()
+
+    return a[-(len(b)):] == b or b[-(len(a)):] == a
